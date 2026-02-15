@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Parcial1_V2.Models
+{
+    public class Tour
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public DateTime Date { get; set; }
+    }
+}
