@@ -8,10 +8,9 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
+                Source="rauw.jpg"
                 HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+                Aspect="AspectFit" />
 
             <Label
                 Text="Hello, World!"
@@ -30,6 +29,9 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 
