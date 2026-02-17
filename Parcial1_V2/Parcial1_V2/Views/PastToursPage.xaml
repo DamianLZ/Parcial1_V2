@@ -14,15 +14,35 @@
         <CollectionView x:Name="PastToursList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="6">
-                        <Grid ColumnDefinitions="*,Auto">
-                            <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                            <Label Text="{Binding Date}" Grid.Column="1"/>
+                    <Border StrokeThickness="1"
+                Padding="10"
+                Margin="6">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+
+                        <Grid ColumnDefinitions="*,Auto"
+                  RowDefinitions="Auto,Auto">
+
+                            <Label Text="{Binding Name}"
+                       FontAttributes="Bold"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                            <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy}'}"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalTextAlignment="End"/>
+
                             <Label Text="{Binding Location}"
-                                   Grid.ColumnSpan="2"
-                                   Grid.Row="1"/>
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       TextColor="Gray"/>
+
                         </Grid>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

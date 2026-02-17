@@ -13,7 +13,8 @@ namespace Parcial1_V2.Data
         {
         new Album { Title = "Afrodisíaco", Year = 2020, Cover = "afrodisiaco.jpg" },
         new Album { Title = "Vice Versa", Year = 2021, Cover = "viceversa.jpg" },
-        new Album { Title = "Saturno", Year = 2022, Cover = "saturno.jpg" }
+        new Album { Title = "Saturno", Year = 2023, Cover = "saturno.jpg" },
+        new Album { Title = "Cosa Nuestra", Year = 2024, Cover = "cosanuestra.jpg" }
         };
 
         public static List<Tour> GetUpcomingTours() => new()
