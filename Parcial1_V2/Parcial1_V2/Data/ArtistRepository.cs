@@ -25,7 +25,9 @@ namespace Parcial1_V2.Data
 
         public static List<Tour> GetPastTours() => new()
         {
-        new Tour { Name = "Vice Versa Tour", Location = "Chile", Date = new DateTime(2022, 8, 10) }
+        new Tour { Name = "Vice Versa Tour", Location = "Chile", Date = new DateTime(2022, 8, 10) },
+        new Tour { Name = "Saturno World Tour", Location = "México", Date = new DateTime(2023, 5, 20) }
+
         };
     }
 }
