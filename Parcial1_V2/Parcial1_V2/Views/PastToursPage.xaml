@@ -2,51 +2,66 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Parcial1_V2.Views.PastToursPage"
-             Title="Giras Pasadas">
+             Title="Giras Pasadas"
+             BackgroundColor="{StaticResource BackgroundColor}">
 
-    <StackLayout Padding="10">
+    <VerticalStackLayout Padding="15" Spacing="12">
 
         <Label Text="Historial de Giras"
                FontSize="22"
                FontAttributes="Bold"
-               HorizontalOptions="Center"/>
+               HorizontalOptions="Center"
+               TextColor="{StaticResource TextColor}" />
 
         <CollectionView x:Name="PastToursList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border StrokeThickness="1"
-                Padding="10"
-                Margin="6">
+
+                    <Border BackgroundColor="{StaticResource CardColor}"
+                            Padding="12"
+                            Margin="0,6"
+                            StrokeThickness="0">
 
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10"/>
                         </Border.StrokeShape>
 
                         <Grid ColumnDefinitions="*,Auto"
-                  RowDefinitions="Auto,Auto">
+                              RowDefinitions="Auto,Auto"
+                              ColumnSpacing="10"
+                              RowSpacing="4">
 
                             <Label Text="{Binding Name}"
-                       FontAttributes="Bold"
-                       Grid.Row="0"
-                       Grid.Column="0"/>
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   TextColor="{StaticResource TextColor}"
+                                   LineBreakMode="WordWrap"
+                                   Grid.Row="0"
+                                   Grid.Column="0"/>
 
                             <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy}'}"
-                       Grid.Row="0"
-                       Grid.Column="1"
-                       HorizontalTextAlignment="End"/>
+                                   FontSize="13"
+                                   TextColor="{StaticResource SecondaryTextColor}"
+                                   HorizontalTextAlignment="End"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/>
 
                             <Label Text="{Binding Location}"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="2"
-                       TextColor="Gray"/>
+                                   FontSize="14"
+                                   TextColor="{StaticResource SecondaryTextColor}"
+                                   LineBreakMode="WordWrap"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"/>
 
                         </Grid>
+
                     </Border>
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-    </StackLayout>
-    
+    </VerticalStackLayout>
+
 </ContentPage>

@@ -2,40 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Parcial1_V2.Views.UpcomingToursPage"
-             Title="Próximas Presentaciones">
+             Title="Próximas Presentaciones"
+             
+             BackgroundColor="{StaticResource BackgroundColor}">
 
-    <StackLayout Padding="10">
+    <VerticalStackLayout Padding="15" Spacing="12">
 
         <Label Text="Próximos conciertos"
                FontSize="22"
                FontAttributes="Bold"
-               HorizontalOptions="Center"/>
+               HorizontalOptions="Center"
+               TextColor="{StaticResource TextColor}" />
 
         <CollectionView x:Name="UpcomingList">
-
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <Border StrokeThickness="1"
-                            Padding="10"
-                            Margin="6">
+                    <Border BackgroundColor="{StaticResource CardColor}"
+                            Padding="12"
+                            Margin="0,6"
+                            StrokeThickness="0">
 
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10"/>
                         </Border.StrokeShape>
 
-                        <StackLayout>
-                            <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                            <Label Text="{Binding Location}"/>
-                            <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy}'}"/>
-                        </StackLayout>
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   TextColor="{StaticResource TextColor}" />
+
+                            <Label Text="{Binding Location}"
+                                   FontSize="14"
+                                   TextColor="{StaticResource SecondaryTextColor}" />
+
+                            <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy}'}"
+                                   FontSize="13"
+                                   TextColor="{StaticResource SecondaryTextColor}" />
+
+                        </VerticalStackLayout>
 
                     </Border>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
         </CollectionView>
 
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>

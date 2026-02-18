@@ -2,28 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Parcial1_V2.Views.DiscografiaPage"
-             Title="Discografía">
-    
-    <StackLayout Padding="10">
+             Title="Discografía"
+             
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <VerticalStackLayout Padding="15" Spacing="12">
 
         <Label Text="Álbumes de Rauw Alejandro"
                FontSize="22"
                FontAttributes="Bold"
-               HorizontalOptions="Center"/>
+               HorizontalOptions="Center"
+               TextColor="{StaticResource TextColor}" />
 
         <CollectionView x:Name="AlbumsList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid ColumnDefinitions="100,*" Padding="5">
-                        <Image Source="{Binding Cover}" HeightRequest="80"/>
-                        <StackLayout Grid.Column="1">
-                            <Label Text="{Binding Title}" FontAttributes="Bold"/>
-                            <Label Text="{Binding Year}"/>
-                        </StackLayout>
-                    </Grid>
+                    <Border BackgroundColor="{StaticResource CardColor}"
+                            Padding="10"
+                            Margin="0,5"
+                            StrokeThickness="0">
+
+                        <Grid ColumnDefinitions="100,*" ColumnSpacing="12">
+
+                            <Image Source="{Binding Cover}"
+                                   HeightRequest="80"
+                                   WidthRequest="80"
+                                   Aspect="AspectFill" />
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                <Label Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       TextColor="{StaticResource TextColor}" />
+
+                                <Label Text="{Binding Year}"
+                                       FontSize="13"
+                                       TextColor="{StaticResource SecondaryTextColor}" />
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
