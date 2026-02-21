@@ -4,35 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Parcial1_V2"
-    Title="Parcial1_V2">
+    Shell.FlyoutBehavior="Disabled">
 
-    <TabBar>
-
-        <ShellContent 
-            Title="Inicio"
-            ContentTemplate="{DataTemplate local:InicioPage}"
-            Route="InicioPage"/>
-
-        <ShellContent
-            Title="Biogfrafía"
-            ContentTemplate="{DataTemplate local:BiografiaPage}"
-            Route="BiografiaPage"/>
-
-        <ShellContent
-            Title="Discografía"
-            Icon="disc.png"
-            ContentTemplate="{DataTemplate views:DiscografiaPage}" />
-
-        <ShellContent
-            Title="Próximas Presentaciones"
-            Icon="calendar.png"
-            ContentTemplate="{DataTemplate views:UpcomingToursPage}" />
-
-        <ShellContent
-            Title="Giras Pasadas"
-            Icon="history.png"
-            ContentTemplate="{DataTemplate views:PastToursPage}" />
-
-    </TabBar>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
 </Shell>
