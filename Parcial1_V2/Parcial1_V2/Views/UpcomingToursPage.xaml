@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcial1_V2.Views.UpcomingToursPage"
+             Title="Próximas Presentaciones"
+             
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <VerticalStackLayout Padding="15" Spacing="12">
+
+        <Label Text="Próximos conciertos"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource TextColor}" />
+
+        <CollectionView x:Name="UpcomingList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border BackgroundColor="{StaticResource CardColor}"
+                            Padding="12"
+                            Margin="0,6"
+                            StrokeThickness="0">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   TextColor="{StaticResource TextColor}" />
+
+                            <Label Text="{Binding Location}"
+                                   FontSize="14"
+                                   TextColor="{StaticResource SecondaryTextColor}" />
+
+                            <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy}'}"
+                                   FontSize="13"
+                                   TextColor="{StaticResource SecondaryTextColor}" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
