@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcial1_V2.Views.BiografiaPage"
+             Title="Biografia">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid HeightRequest="700">
+                <Image Source="https://e00-mx-marca.uecdn.es/mx/assets/multimedia/imagenes/2023/07/08/16888458604678.jpg" 
+                   Aspect="AspectFill" 
+                   Opacity="0.8"/>
+                <BoxView>
+                    <BoxView.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="Transparent" Offset="0.4" />
+                            <GradientStop Color="{StaticResource Primary}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Label Text="RAUW ALEJANDRO" 
+                   VerticalOptions="End" 
+                   HorizontalOptions="Center" 
+                   FontSize="40" 
+                   FontAttributes="Bold" 
+                   TextColor="White"
+                   Margin="0,0,0,20"/>
+            </Grid>
+
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="EL PRINCIPE DEL POP" 
+                   TextColor="{StaticResource Secondary}" 
+                   FontAttributes="Bold" 
+                   FontSize="14" 
+                   CharacterSpacing="2"/>
+
+                <Label Text="Rauw Alejandro (Raúl José Alejandro Ocasio Ruiz), nacido el 10 de enero de 1993 en San Juan, Puerto Rico, es un destacado cantante, compositor y bailarín de música urbana, reconocido por fusionar reguetón y pop."
+                   TextColor="Black" 
+                   FontSize="16" 
+                   LineHeight="1.5"/>
+
+                <Border BackgroundColor="LightBlue" 
+                   Stroke="{StaticResource Secondary}" 
+                   StrokeShape="10"
+                   Margin="0,10">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Salto a la fama:" TextColor="Black" FontAttributes="Bold"/>
+                        <Label Text="•Comenzó subiendo canciones a SoundCloud en 2014, lanzando su primer mixtape Punto de equilibrio en 2015." TextColor="Gray"/>
+                        <Label Text="•Su éxito masivo llegó en 2018 con la colaboración 'Toda' junto a Alex Rose." TextColor="Gray"/>
+                      
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border BackgroundColor="LightBlue"  Stroke="{StaticResource Secondary}" StrokeShape="10" Margin="0,10">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Álbumes claves" TextColor="Black" FontAttributes="Bold"/>
+                        <Label Text="• Lanzó Afrodisíaco (2020)" TextColor="Gray"/>
+                        <Label Text="• Seguido del éxito mundial Viceversa (2021) que incluyó 'Todo de ti', un tema pop-dance que rompió récords" TextColor="Gray"/>
+                        <Label Text="• Más tarde Saturno (2022)."  TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border BackgroundColor="LightBlue"  Stroke="{StaticResource Secondary}" StrokeShape="10" Margin="0,10">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="Estilos y reconocimientos" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="• Es conocido por su gran capacidad de baile y sus actuaciones energéticas." TextColor="Gray"/>
+                                <Label Text="• Ha ganado premios Grammy Latinos, incluyendo Mejor Fusión/Interpretación Urbana en 2021." TextColor="Gray"/>
+                                <Label Text="• Ha colaborado con artistas de renombre como Shakira, Daddy Yankee, Bad bunny y Rosalía, con quien tuvo una relación sentimental y musical." TextColor="Gray"/>
+                            </VerticalStackLayout>
+                </Border>
+                
+            </VerticalStackLayout>
+                
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

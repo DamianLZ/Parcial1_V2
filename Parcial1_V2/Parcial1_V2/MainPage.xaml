@@ -4,6 +4,8 @@
             xmlns:views="clr-namespace:Parcial1_V2.Views"
             x:Class="Parcial1_V2.MainPage">
 
+    <views:InicioPage Title="Inicio"/>
+    <views:BiografiaPage Title="Biografía"/>
     <views:DiscografiaPage Title="Discografía"/>
     <views:UpcomingToursPage Title="Próximos Tours"/>
     <views:PastToursPage Title="Giras"/>
