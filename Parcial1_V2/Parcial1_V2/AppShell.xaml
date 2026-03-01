@@ -16,7 +16,7 @@
         <ShellContent
             Title="Biografía"
             ContentTemplate="{DataTemplate local:BiografiaPage}" />
-
+ 
         <ShellContent
             Title="Discografía"
             ContentTemplate="{DataTemplate local:DiscografiaPage}" />
